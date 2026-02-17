@@ -1,0 +1,4 @@
+background: #000000
+primary: #A057F7
+secondary: #FBAF16
+highlight: #6642C2
