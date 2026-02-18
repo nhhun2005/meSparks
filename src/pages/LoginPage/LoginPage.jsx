@@ -3,12 +3,13 @@ import { VscSparkle as AppIcon } from "react-icons/vsc";
 import { MdOutlineEmail as EmailIcon } from "react-icons/md";
 import { MdLockOutline as PasswordIcon } from "react-icons/md";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 export default function LoginPage() {
   const { email, setEmail } = useState("");
   const { password, setPassword } = useState("");
 
   return (
-    <div className="flex-container">
+    <div className="flex-container fade-in">
       <div className="hero-container">
         <AppIcon id="app-icon"></AppIcon>
         <h2>meSparks</h2>
@@ -21,7 +22,7 @@ export default function LoginPage() {
             placeholder="Email"
             value={email}
             onChange={(e) => {
-              setEmail(e.value);
+              setEmail(e.target.value);
             }}
           ></input>
         </div>
@@ -31,14 +32,16 @@ export default function LoginPage() {
             placeholder="Password"
             value={password}
             onChange={(e) => {
-              setPassword(e.value);
+              setPassword(e.target.value);
             }}
           ></input>
         </div>
         <button>Sign In</button>
-        <p id="register-label">
-          Don't have an account? <span>Register</span>
-        </p>
+        <Link to="/register" style={{ textDecoration: "none", color: "white" }}>
+          <p id="register-label">
+            Don't have an account? <span>Register</span>
+          </p>
+        </Link>
       </div>
     </div>
   );

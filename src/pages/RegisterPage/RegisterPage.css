@@ -25,7 +25,7 @@
 .hero-container p {
   color: #99a1af;
 }
-.login-container {
+.register-container {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -45,9 +45,12 @@
   background-color: #18181b;
   border-radius: 24px;
   padding: 8px 16px 8px 16px;
+  transition: all 0.3s ease;
 }
 .input-group:focus-within {
   outline: 2px solid #a057f7;
+  transform: translateY(-2px);
+  scale: 1.02;
 }
 .input-group input {
   border: 0px;
@@ -60,7 +63,7 @@
   color: white;
 }
 
-.login-container button {
+.register-container button {
   width: 30%;
   background-color: #a057f7;
   padding: 1rem;
@@ -69,16 +72,15 @@
   transition: all 0.3s ease;
   border-radius: 24px;
 }
-.login-container button:hover {
+.register-container button:hover {
   transform: translateY(-2px);
   scale: 1.02;
   cursor: pointer;
 }
-
-#register-label:hover {
+#login-label:hover {
   cursor: pointer;
   color: #fbaf16;
 }
-#register-label span {
+#login-label span {
   color: #fbaf16;
 }
