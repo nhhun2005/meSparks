@@ -5,8 +5,8 @@ import { MdLockOutline as PasswordIcon } from "react-icons/md";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function LoginPage() {
-  const { email, setEmail } = useState("");
-  const { password, setPassword } = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className="flex-container fade-in">
@@ -36,6 +36,10 @@ export default function LoginPage() {
             }}
           ></input>
         </div>
+        <Link to="/forgot-password" className="forgot-password-link">
+          <p id="forgot-password-label">Forgot password?</p>
+        </Link>
+
         <button>Sign In</button>
         <Link to="/register" style={{ textDecoration: "none", color: "white" }}>
           <p id="register-label">

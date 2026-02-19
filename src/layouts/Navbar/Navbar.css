@@ -1,0 +1,34 @@
+.navbar-container {
+  user-select: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  padding-top: 8px;
+  box-shadow: 0px -2px rgb(255 255 255 / 0.2);
+}
+
+.navbar-item {
+  font-size: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: lightgray;
+  transition: all 0.3s ease;
+}
+.navbar-item p {
+  color: inherit;
+}
+.navbar-item.active {
+  color: #a057f7;
+}
+
+.navbar-item:hover {
+  cursor: pointer;
+  color: #a057f7;
+}
