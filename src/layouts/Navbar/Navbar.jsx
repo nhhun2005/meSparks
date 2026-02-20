@@ -7,13 +7,16 @@ import { NavbarContext } from "../../contexts/NavbarContext";
 import { HeaderContext } from "../../contexts/HeaderContext";
 import { CiSettings as SettingsIcon } from "react-icons/ci";
 import { VscSparkle as AppIcon } from "react-icons/vsc";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const { selectedPage, setSelectedPage } = useContext(NavbarContext);
   const { setHeaderInfo } = useContext(HeaderContext);
+  const navigator = useNavigate();
   const handleChangePage = (page) => {
     setSelectedPage(page);
     setHeaderInfo(getHeaderInfo(page));
+    navigator(page);
   };
   const getHeaderInfo = (page) => {
     if (page == "home") {

@@ -10,6 +10,9 @@
   width: 95%;
   user-select: none;
 }
+.settings-group p {
+  color: white;
+}
 .settings-group .settings-card:nth-of-type(1) {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px 16px 0 0;
@@ -21,7 +24,7 @@
   border-radius: 16px;
 }
 .settings-card {
-  background-color: #1a1919;
+  background-color: color-mix(in srgb, currentColor 5%, transparent);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -47,12 +50,12 @@
   background-color: color-mix(in srgb, currentColor 20%, transparent);
 }
 .settings-card:hover {
-  outline: 2px solid #a057f7;
+  outline: 2px solid color-mix(in srgb, currentColor 50%, white);
   transform: translateY(-2px);
   scale: 1.02;
 }
 .logout-button {
-  background-color: #1a1919;
+  background-color: color-mix(in srgb, currentColor 5%, transparent);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   width: 95%;

@@ -5,12 +5,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/global.css";
 import { HeaderContext, HeaderProvider } from "./contexts/HeaderContext";
-import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import { NavbarProvider } from "./contexts/NavbarContext";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
 import SettingsPage from "./pages/SettingsPage/SettingsPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +23,11 @@ const router = createBrowserRouter([
       </HeaderProvider>
     ),
     children: [
+      {
+        index: true,
+        path: "home",
+        element: <HomePage></HomePage>,
+      },
       {
         path: "settings",
         element: <SettingsPage></SettingsPage>,

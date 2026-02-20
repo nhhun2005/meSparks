@@ -22,7 +22,7 @@ export default function SettingsPage() {
     <div className="settings-container">
       <div className="settings-group">
         <p>Account</p>
-        <div className="settings-card">
+        <div className="settings-card" style={{ color: "#FBAF16" }}>
           <PasswordIcon
             className="settings-icon"
             style={{ color: "#FBAF16" }}
@@ -32,14 +32,14 @@ export default function SettingsPage() {
       </div>
       <div className="settings-group">
         <p>Preferences</p>
-        <div className="settings-card">
+        <div className="settings-card" style={{ color: "#8B5CF6" }}>
           <NotificationsIcon
             className="settings-icon"
             style={{ color: "#8B5CF6" }}
           ></NotificationsIcon>
           <p>Notifications</p>
         </div>
-        <div className="settings-card">
+        <div className="settings-card" style={{ color: "#644682" }}>
           <AppearancesIcon
             className="settings-icon"
             style={{ color: "#644682" }}
@@ -47,7 +47,7 @@ export default function SettingsPage() {
           <p>Appearances</p>
         </div>
       </div>
-      <div className="logout-button">
+      <div className="logout-button" style={{ color: "#ef4444" }}>
         <LogoutIcon></LogoutIcon>
         Logout
       </div>

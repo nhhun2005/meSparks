@@ -1,0 +1,13 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+
+  align-items: center;
+}
+.homepage-container p {
+  width: 95%;
+  text-align: left;
+  color: white;
+}
